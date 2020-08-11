@@ -1,0 +1,32 @@
+
+
+/* extract */
+
+.extract {
+  display: block;
+}
+
+.extract ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.extract--item {
+  display: flex;
+  padding: 22px 10px;
+  border-bottom: 1px solid #251e3e;
+}
+
+.extract--amount {
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.extract--item--out .extract--amount {
+  color: #851e3e;
+}
+.extract--item--in .extract--amount {
+  color: #6497b1;
+}

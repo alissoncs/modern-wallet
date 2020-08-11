@@ -1,0 +1,11 @@
+
+
+.balance {
+  background: #251e3e;
+  padding: 22px 10px;
+  display: flex;
+  border-radius: 3px;
+  justify-content: space-between;
+  font-size: 1.2em;
+  margin-bottom: 32px;
+}
