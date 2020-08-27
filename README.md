@@ -3,6 +3,8 @@
 Implementation of a simple payment wallet.
 
 ## Features
+- Bearer Authorization
+- Authentication
 - Payments
 - Deposit cash
 - Withdraws
