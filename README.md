@@ -1,10 +1,20 @@
 # Modern Wallet
 
+Implementation of a simple payment wallet.
+
+## Features
+- Payments
+- Deposit cash
+- Withdraws
+- Daily yield - TODO
+
+## Docs
 - [TODO info](TODO.md)
 - [Rest API Docs](api.md)
 
 ## Lets collaborate: Todo List
 - Encrypt password
+- Daily yield
 - Implement the Payment service, using an external API
 - Unit tests :(
 - API Automation tests :(
