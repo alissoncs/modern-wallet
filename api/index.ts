@@ -18,7 +18,6 @@ const PORT = process.env.PORT || 8081;
 
 connection.connect()
   .then(() => {
-
     console.info('connect ok');
     app.listen(PORT, () => {
       console.log(`Server running at: ${PORT}, env: ${process.env.NODE_ENV}`);
