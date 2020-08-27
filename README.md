@@ -1,4 +1,4 @@
 # Modern Wallet
 
-[TODO info](TODO.md)
-[Rest API Docs](api.md)
+- [TODO info](TODO.md)
+- [Rest API Docs](api.md)

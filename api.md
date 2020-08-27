@@ -46,7 +46,7 @@ POST /account
 
 # Endpoints that require Authentication
 
-## Summary
+## Account Summary
 Returns the summary of account: deposits, withdraws, profits and payments.
 
 ```
@@ -84,5 +84,39 @@ GET /account/summary
             "date": "2020-08-27T15:29:49.700Z"
         }
     ]
+}
+```
+
+
+## Account Deposit
+Deposit cash to the account
+
+```
+POST /account/deposit
+{
+  "value": 180.50,
+  "machine": "Saque e Pague Nilo Peçanha"
+}
+```
+
+## Account Withdraw
+Withdraw from the account
+
+```
+POST /account/withdraw
+{
+  "value": 50.00,
+  "machine": "Saque e Pague Nilo Peçanha"
+}
+```
+
+## Account Withdraw
+Pay a default payment slip
+
+```
+POST /account/payment
+{
+  "value": 129.00,
+  "barCode": "123321123321123321"
 }
 ```
