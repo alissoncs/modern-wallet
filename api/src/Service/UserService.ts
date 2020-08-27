@@ -46,7 +46,7 @@ export class UserService {
   async create(data: IUserCreate): Promise<UserAndAccount> {
     const user = new User();
     user.name = data.name;
-    user.password = data.password; // TODO encrypt
+    user.password = data.password; // TODO encrypt password
     user.email = data.email;
 
     const existentUser = await this.userRepository.findOne({
