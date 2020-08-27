@@ -17,6 +17,7 @@ router.get('/account/summary', AuthMiddleware.verify, AccountController.summary)
 
 router.post('/account/deposit', AuthMiddleware.verify, AccountController.deposit);
 router.post('/account/withdraw', AuthMiddleware.verify, AccountController.withdraw);
+router.post('/account/payment', AuthMiddleware.verify, AccountController.payment);
 
 
 export default router;

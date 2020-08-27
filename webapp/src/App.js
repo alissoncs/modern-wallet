@@ -3,10 +3,16 @@ import { Route, Switch, HashRouter } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Body from './components/Body';
-import Extract from './components/Extract';
-import Rescue from './components/Rescue';
-import Apply from './components/Apply';
+import Summary from './components/Summary';
+import Withdraw from './components/Withdraw';
+import Deposit from './components/Deposit';
 import Pay from './components/Pay';
+import NewAccount from './components/User/NewAccount';
+import Currency from './components/Util/Currency';
+import DateComponent from './components/Util/Date';
+
+global.CurrencyComponent = Currency;
+global.DateComponent = DateComponent;
 
 function App() {
   return (
@@ -14,10 +20,11 @@ function App() {
       <HashRouter>
         <Body>
           <Switch>
-            <Route exact path='/' component={Extract} />
-            <Route exact path='/resgatar' component={Rescue} />
-            <Route exact path='/aplicar' component={Apply} />
-            <Route exact path='/pagar' component={Pay} />
+            <Route exact path='/' component={NewAccount} />
+            <Route exact path='/account/' component={Summary} />
+            <Route exact path='/account/withdraw' component={Withdraw} />
+            <Route exact path='/account/deposit' component={Deposit} />
+            <Route exact path='/account/pay' component={Pay} />
           </Switch>
         </Body>
       </HashRouter>

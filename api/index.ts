@@ -1,6 +1,7 @@
 import express from 'express';
 import { resolve } from 'path';
 import { config } from 'dotenv';
+import cors from 'cors';
 config({ path: resolve(__dirname, ".env") });
 
 import bodyParser from 'body-parser';
@@ -10,6 +11,7 @@ import { connection } from './db';
 console.info('Start index');
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use(routes);

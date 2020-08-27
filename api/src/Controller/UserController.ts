@@ -17,7 +17,7 @@ export class UserController {
           token,
         });
       }).catch((err: Error) => {
-        res.json({
+        res.status(500).json({
           error: err.message,
         });
       });
@@ -33,7 +33,7 @@ export class UserController {
         ok: true,
       });
     }).catch((err: Error) => {
-      res.json({
+      res.status(500).json({
         error: err.message,
       });
     });

@@ -80,7 +80,7 @@ export class AccountService {
     });
 
     const summary = new AccountSummary();
-    summary.paymentDetail = `Deposit has done at ${data.machine}`;
+    summary.paymentDetail = '';
     summary.value = data.value;
     summary.date = new Date();
     summary.account = account;
@@ -107,7 +107,7 @@ export class AccountService {
     }
 
     if (currentAccount.balance < data.value) {
-      throw new Error('Insifitient balance to a withdraw');
+      throw new Error('Insufitient balance to a withdraw');
     }
 
     const newBalance = currentAccount.balance - data.value;
@@ -137,8 +137,13 @@ export class AccountService {
   }
 
   async getSummary(account: Account): Promise<AccountSummary[]> {
-    const list = await this.summaryRepository.find({
-      account: account,
+    const [list, count] = await this.summaryRepository.findAndCount({
+      where: {
+        account: account,
+      },
+      order: {
+        date: 'DESC',
+      }
     });
     return list;
   }
