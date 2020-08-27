@@ -20,6 +20,7 @@ export class AccountSummary {
   @Column('int')
   operation: Operation;
 
+  @Column()
   paymentDetail: string;
 
   @Column()
