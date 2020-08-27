@@ -60,6 +60,7 @@ export class UserService {
     const account = new Account();
     account.balance = 0; // TODO, const here
     account.lastUpdate = new Date();
+    account.dailyRent = 1.5; // percent
 
     await connection.manager.transaction(async transaction => {
       await transaction.save(user);

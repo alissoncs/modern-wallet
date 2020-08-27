@@ -13,6 +13,9 @@ export class Account {
   @Column()
   lastUpdate: Date;
 
+  @Column()
+  dailyRent: number;
+
   @OneToOne(type => User, user => user.account)
   @JoinColumn()
   user: User;
